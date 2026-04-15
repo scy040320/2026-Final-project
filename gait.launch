@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find jethexa_controller)/launch/jethexa_controller.launch">
+        <arg name="odom_enable" value="true" />
+        <arg name="imu_enable" value="true" />
+    </include>
+
+    <node name="moving_monitor_node" pkg="jethexa_tutorial" type="gait.py" output="screen" required="true">
+        </node>
+
+</launch>
